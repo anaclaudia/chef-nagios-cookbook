@@ -7,9 +7,14 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
-  - name: centos-7.2
-
+    driver_config:
+      network:
+        - ["private_network", {ip: "192.168.33.33"}]
 suites:
   - name: default
     run_list:
+      - recipe[app::default]
+      - recipe[app::user]
+      - recipe[app::nagios]
+      - recipe[app::plugins]
     attributes:
