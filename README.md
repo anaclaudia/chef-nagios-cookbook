@@ -11,8 +11,11 @@ Go to the project directory: ``cd chef-nagios-cookbook``
 ## Test Kitchen
 
 ``gem install test-kitchen``
+
 ``gem install kitchen-vagrant``
 
 ``kitchen create default-ubuntu-1404``
+
 ``kitchen converge default-ubuntu-1404``
+
 ``kitchen verify default-ubuntu-1404``
